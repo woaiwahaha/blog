@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="root" extends="struts-default">
+		<action name="LoginAction" class="com.blog.action.LoginAction">
+			<result name="success">main.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="list">list.jsp</result>
+			<result name="personDetail">personDetail.jsp</result>
+			<result name="tolist" type="redirect">LoginAction!getPersonalList</result>
+			<result name="wenzhangs">wenzhangs.jsp</result>
+			<result name="addwenzhang">addwenzhang.jsp</result>
+			<result name="towenzhangs" type="redirect">LoginAction!getWenzhangList</result>
+			<result name="wenzhangdetail">wenzhangdetail.jsp</result>
+			<result name="types">types.jsp</result>
+			<result name="totypeList" type="redirect">LoginAction!getTypeList</result>
+		</action>
+		
+		<action name="RegistAction" class="com.blog.action.RegistAction">
+			<result name="success" type="redirect">index.jsp</result>
+		</action>
+	</package>
+</struts>    
